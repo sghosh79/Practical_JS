@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+
+function myfunction(){
+/*	var d = new Date()
+	document.write("The Date is" + d + "<br>")
+	document.write("Get Date" + d.getDate() + "<br>")
+	document.write("Get Full Year" + d.getFullYear() + "<br>")
+	document.write("Get Time" + d.getTime() + "<br>") 
+*/
+	var d = new Date();
+	var month = d.getMonth();
+	var day = d.getDate();
+	switch (month){
+		case 0:
+		var month = "January";
+		break;
+		case 1:
+		var month = "February"
+		break;
+		case 2:
+		var month = "March";
+		break;
+		
+	}
+
+document.getElementById('today').innerHTML = "today is the " + day + " day of " + month;
+}
+</script>
+</head>
+<body onLoad="myfunction()">
+<h1>Welcome!</h1>
+
+
+<p id="today"> </p>
+
+<h2>Good Bye</h2>
+</body>
+</html>

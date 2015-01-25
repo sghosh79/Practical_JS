@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Course</title>
+<script>
+function myfunction(){
+	var a = document.getElementsByTagName('img')[0]
+	var atts = new Array();
+	atts["alt"] = a.getAttribute("alt");
+	atts["title"] = a.getAttribute("title")
+	atts["src"] = a.getAttribute("src")
+	alert (atts["src"])
+}
+</script>
+
+</head>
+
+<body>
+<img src="image.jpg" width="600" alt="The alt text" title="The title text" onClick="myfunction()">
+</body>
+</html>

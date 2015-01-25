@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Course</title>
+<style>
+#wrap{width:500px; margin:auto}
+#wrap div {background:gray; float:left; width:33.33%; text-align:center}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+    <div id="one">some<br>content<br>here</div>
+    <div id="two">some<br>more<br>content<br>here</div>
+    <div id="three">even<br>more<br>content<br>in<br>this<br>div</div>  
+</div>
+<p id="para"></p>
+<script>
+var one = document.getElementById('one').offsetHeight
+var two = document.getElementById('two').offsetHeight
+var three = document.getElementById('three').offsetHeight
+var myarray = [one, two, three];
+var m = Math.max.apply(Math, myarray)
+document.getElementById('para').innerHTML = m
+var one = document.getElementById('one')
+var two = document.getElementById('two')
+var three = document.getElementById('three')
+var onepadding = (m - one.offsetHeight) / 2
+var twopadding = (m - two.offsetHeight) / 2
+var threepadding = (m - three.offsetHeight) / 2
+one.style.height = m - onepadding + "px"
+two.style.height = m - twopadding + "px"
+three.style.height = m - threepadding + "px"
+one.style.paddingTop = onepadding + "px"
+two.style.paddingTop = twopadding + "px"
+three.style.paddingTop = threepadding + "px"
+
+</script>
+</body>
+</html>

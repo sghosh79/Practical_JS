@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function thealertmessage(){
+	var box = document.getElementById('box').value;
+	switch (box){
+		case "man":
+		alert ("hello sir");
+		break;
+		case "woman":
+		alert ("Hello Miss");
+		break;
+		case "dog":
+		alert ("hello dog");
+		break;
+		case "cat":
+		alert ("hello cat");
+		break;
+		default:
+		alert ("Please select an option");
+		return false;
+		break;
+	}
+
+
+
+}
+/*
+a < b
+a > b
+a = b
+a == b
+a === b
+a != b
+a !== b
+var one = "1"
+var one = 1
+*/
+
+</script>
+</head>
+<body>
+<form onSubmit="thealertmessage()">
+I am a...<select id="box">
+     <option>please select...</option>
+    <option value="man">man</option>
+    <option value="woman">woman</option>
+    <option value="dog">dog</option>
+    <option value="cat">cat</option>
+</select>
+<input type="submit" value="submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body > div {background:rgb(240,240,240); width:70%; height:1000px; margin:auto; position:relative}
+div > div p {width:60%;}
+img {width:30%; position:absolute; top:0; right:-100px;}
+h1 {width:50%; margin-right:10%; float:left; background:rgb(250,230,230)}
+ul {width:40%; background:rgb(230,250,230); float:left; padding:0; position:absolute; right:0;}
+</style>
+</head>
+<body>
+<div>
+    <div>
+      <p>Sed do eiusmod tempor incididunt duis aute irure dolor in reprehenderit in voluptate. Consectetur adipisicing elit, lorem ipsum dolor sit amet, ut aliquip ex ea commodo consequat. Qui officia deserunt sunt in culpa in reprehenderit in voluptate. Cupidatat non proident, sed do eiusmod tempor incididunt velit esse cillum dolore.</p>
+        <img src="beach_large.jpg">
+    </div>
+    <div>
+        <h1>This is a website</h1>
+        <ul>
+            <li>Sed do eiusmod</li>
+            <li>eiusmod tempo</li>
+            <li>incididunt duis</li>
+            <li>dipisicing elit</li>
+            <li>cillum dolore</li>
+        </ul>
+    </div>
+</div>
+<script>
+window.onload = function(){
+	var height = document.getElementsByTagName('img')[0].offsetHeight;
+	var height = height + 30 + "px"
+	document.getElementsByTagName('ul')[0].style.top = height;
+}
+
+window.onresize = function(){
+	var height = document.getElementsByTagName('img')[0].offsetHeight;
+	var height = height + 30 + "px"
+	document.getElementsByTagName('ul')[0].style.top = height;
+}
+
+
+</script>
+</body>
+</html>

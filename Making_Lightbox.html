@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#popup {position:absolute; top:50%; left:50%; width:200px; height:200px; margin:-100px 0 0 -100px; border:1px solid; text-align:center; box-shadow:0 0 50px 10px; display:none}
+</style>
+</head>
+<body>
+<input type="button" value="signup for our newsletter" onClick="myfunction()">
+<div id="popup">
+<p>Email address</p>
+<input type="text">
+<input onClick="closebox()" type="button" value="submit">
+<p onClick="closebox()">No Thanks</p>
+</div>
+<script>
+function myfunction(){
+	document.getElementById('popup').style.display = "block";
+}
+function closebox(){
+	document.getElementById('popup').style.display = "none";
+}
+
+setTimeout (
+	function(){
+		document.getElementsByTagName('input')[0].click()
+	}, 2000
+
+)
+</script>
+</body>
+</html>

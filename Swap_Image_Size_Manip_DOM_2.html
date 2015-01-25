@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Course</title>
+<script>
+	var X
+	var randomvariable = X
+
+function myfunction(){
+/*	var img = document.getElementById('theimage')
+	var src = img.getAttribute('src')
+	src = src.substring(0,length)
+	img.setAttribute('alt',src)
+*/
+	var img = document.getElementById('theimage')
+	var thesrc = img.getAttribute("src")
+	var length = thesrc.length - 9
+	thesrc = thesrc.substring(length, length + 5)
+if (thesrc == "thumb"){
+	var oldsrc = img.getAttribute("src")
+	img.setAttribute('src',oldsrc.substring(0, length) + "full.jpg")
+	
+	//img.setAttribute('src',"image-full.jpg")	
+} else {
+	var oldsrc = img.getAttribute("src")
+	img.setAttribute('src',oldsrc.substring(0, length + 1) + "thumb.jpg")
+	//img.setAttribute('src',"image-thumb.jpg")	
+}
+
+
+}
+
+
+function secondfunction(){
+	
+}
+</script>
+
+</head>
+
+<body>
+<input type="button" onClick="myfunction()" value="swap img src">
+<img src="image-thumb.jpg" id="theimage">
+</body>
+</html>

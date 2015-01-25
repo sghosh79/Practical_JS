@@ -1,0 +1,35 @@
+<!--Pics shoudld be 900 x 570-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Course</title>
+<style>
+body > div {width:900px; margin:auto;}
+#thumbs img{width:250px; margin:0 25px; float:left;}
+</style>
+</head>
+
+<body>
+<div>
+    <img class="thefeaturedimg" src="img1.jpg">
+    <div id="thumbs">
+        <img class="switchclass" src="img1.jpg">
+        <img class="switchclass" src="img2.jpg">
+        <img class="switchclass" src="img3.jpg">
+    </div>
+</div>
+<script>
+var newsrc = document.getElementsByClassName('switchclass');
+	for (var i = 0; i < newsrc.length; i++){
+		var thenewsrc = newsrc[i];
+		thenewsrc.onclick = function(){
+			var thesrc = this.getAttribute("src");
+			document.getElementsByClassName('thefeaturedimg')[0].setAttribute("src",thesrc);
+		}
+		
+	}
+</script>
+</body>
+</html>

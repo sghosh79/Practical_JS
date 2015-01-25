@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+Bad vision? How big do you want the text? (in px)<br>
+<input type="text" id="thecolor">px
+
+<input type="button" value="click me" onclick="myfunction()">
+<p id="paragraph">Eu fugiat nulla pariatur. Velit esse cillum dolore sed do eiusmod tempor incididunt excepteur sint occaecat. Ut labore et dolore magna aliqua. Ullamco laboris nisi mollit anim id est laborum. Duis aute irure dolor qui officia deserunt quis nostrud exercitation.</p>
+<script>
+/*function myfunction(){
+	var thesize = document.getElementById('thecolor').value;
+	var paragraph = document.getElementById('paragraph').style
+	paragraph.fontSize = "2em"
+}*/
+function myfunction(){
+	var tag = document.getElementsByTagName('body')[0]
+	var a = document.getElementsByTagName('input')[0].value;
+	tag.style.fontSize = a + "px"
+
+	alert(id + ", " + tag)
+}
+
+</script>
+</body>
+</html>

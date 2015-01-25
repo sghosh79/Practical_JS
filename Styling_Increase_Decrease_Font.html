@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript</title>
+<style>
+body input:last-of-type{display:none}
+</style>
+<script>
+	function bigger(){
+		document.getElementsByTagName('body')[0].style.fontSize = "1.2em"
+		document.getElementsByTagName('input')[0].style.display = "none"
+		document.getElementsByTagName('input')[1].style.display = "block"
+	}
+
+	function smaller(){
+		document.getElementsByTagName('body')[0].style.fontSize = "1em"
+		document.getElementsByTagName('input')[0].style.display = "block"
+		document.getElementsByTagName('input')[1].style.display = "none"
+	}
+
+</script>
+</head>
+
+<body>
+    <input onClick="bigger()" type="button" value="increase the text size">
+    <input onClick="smaller()" type="button" id="btn" value="decrease the text size">
+    <p id="para">Eu fugiat nulla pariatur. Velit esse cillum dolore sed do eiusmod tempor incididunt excepteur sint occaecat. Ut labore et dolore magna aliqua. Ullamco laboris nisi mollit anim id est laborum. Duis aute irure dolor qui officia deserunt quis nostrud exercitation.</p>
+q
+
+</body>
+</html>

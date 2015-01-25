@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+
+function myfunction(){
+/*	var d = new Date()
+	document.write("The Date is" + d + "<br>")
+	document.write("Get Date" + d.getDate() + "<br>")
+	document.write("Get Full Year" + d.getFullYear() + "<br>")
+	document.write("Get Time" + d.getTime() + "<br>") 
+*/
+	var d = new Date();
+	var day = d.getDay();
+	var time = d.getHours();
+	var today = document.getElementById('today');
+	if (day == 0 || day == 6){
+		today.innerHTML = "Sorry We're Closed";
+		today.style.color = "red"
+	} else if (time < 9 || time > 17){
+		today.innerHTML = "Sorry We're Closed"
+		today.style.color = "red"
+	} else {
+		today.innerHTML = "Come on in!"
+		today.style.color = "green"
+	}
+	
+//today = "today is the " + day + " day of " + month;
+}
+</script>
+</head>
+<body onLoad="myfunction()">
+<h1>Welcome!</h1>
+Store Hours
+<ul>
+<li>Monday - Friday : 9am - 5pm</li>
+<li>Sat , Sun : Closed  </li>
+</ul>
+
+<p id="today"> </p>
+
+<h2>Good Bye</h2>
+</body>
+</html>

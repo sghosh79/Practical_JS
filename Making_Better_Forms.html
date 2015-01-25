@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<style>
+fieldset{width:50%; padding:50px; margin:auto}
+body div:first-of-type{float:left; width:48%; text-align:right; margin-right:2%;}
+body div:last-of-type{float:left; width:50%;}
+p {height:25px;}
+#passwordpara, #passwordconf, #url { visibility:hidden}
+#theurlfield {display:none}
+</style>
+</head>
+<body>
+<fieldset>
+<div>
+<p><input type="text" placeholder="Name" onFocus="namefocus()"></p>
+<p><input type="text" placeholder="Email" onFocus="emailfocus()" onBlur="emailblur()"></p>
+<p><input type="text" placeholder="Password" onFocus="passwordfocus()" onBlur="passwordblur()"></p>
+<p><input type="text" placeholder="Password Confirm" onBlur="passwordconfirm()"></p>
+<p>Do you have a website?<input type="checkbox" onChange="ischecked()"></p>
+<p><input id="theurlfield" type="text" placeholder="URL" onFocus="urlfocus()" onBlur="urlblur()"></p>
+</div>
+<div>
+<p id="namepara">&nbsp;</p>
+<p id="emailpara">&nbsp;</p>
+<p id="passwordpara">Must have at least 5 Characters</p>
+<p id="passwordconf">Passwords Dont Match</p>
+<p>&nbsp;</p>
+<p id="url">Please Enter The URL</p>
+</div>
+</fieldset>
+<script>
+function namefocus(){
+	document.getElementById('namepara').innerHTML = "First Name Only";	
+}
+function emailfocus(){
+	document.getElementById('emailpara').innerHTML = "Please Provide a real email address"
+}
+function emailblur(){
+	document.getElementById('emailpara').innerHTML = "&nbsp;"
+}
+function passwordfocus(){
+	document.getElementById('passwordpara').style.visibility = "visible"	
+}
+function passwordblur(){
+	if( document.getElementsByTagName('input')[2].value.length < 5){
+		document.getElementById('passwordpara').innerHTML = "Not Long Enough";
+		document.getElementById('passwordpara').style.color = "red";
+	} else {
+	document.getElementById('passwordpara').style.visibility = "hidden"	
+	}	
+}
+function passwordconfirm(){
+	var first = document.getElementsByTagName('input')[2].value
+	var second = document.getElementsByTagName('input')[3].value
+	if (first != second){
+		document.getElementById('passwordconf').style.visibility = "visible"	
+	} else {
+		document.getElementById('passwordconf').style.visibility = "hidden"	
+	}
+}
+
+function ischecked(){
+	if(document.getElementsByTagName('input')[4].checked == true){
+		document.getElementsByTagName('input')[5].style.display = "block"
+	}
+}
+</script>
+</body>
+</html>

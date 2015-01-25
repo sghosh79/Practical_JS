@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Course</title>
+<script>
+function myfunction(){
+/*	var img = document.getElementById('theimage')
+	var src = img.getAttribute('src')
+	var length = src.length - 4
+	src = src.substring(0,length)
+	img.setAttribute('alt',src)
+*/
+	var img = document.getElementById('theimage')
+	var thesrc = img.getAttribute("src")
+if (thesrc == "image-thumb.jpg"){
+	img.setAttribute('src',"image-full.jpg")	
+} else {
+	img.setAttribute('src',"image-thumb.jpg")	
+}
+
+
+}
+</script>
+
+</head>
+
+<body>
+<input type="button" onClick="myfunction()" value="swap img src">
+<img src="image-thumb.jpg" id="theimage">
+</body>
+</html>
